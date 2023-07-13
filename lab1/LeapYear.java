@@ -1,5 +1,15 @@
+/*
+ * @Author: LittleSky32 skyshao0908@gmail.com
+ * @Date: 2023-07-13 08:52:58
+ * @LastEditors: LittleSky32 skyshao0908@gmail.com
+ * @LastEditTime: 2023-07-13 23:23:54
+ * @FilePath: \Users\Public\cs61b\lab1\LeapYear.java
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
+ */
 /** Class that determines whether or not a year is a leap year.
- *  @author YOUR NAME HERE
+ *  @author Sky
  */
 public class LeapYear {
 
@@ -12,6 +22,13 @@ public class LeapYear {
         } else {
             System.out.printf("%d is not a leap year.\n", year);
         }
+    }
+
+    public static boolean isLeapYear(int year){
+        if((year %4 == 0 & year % 100 != 0) | (year % 400 == 0)){
+            return true;
+        }
+        return false;
     }
 
     /** Must be provided an integer as a command line argument ARGS. */
